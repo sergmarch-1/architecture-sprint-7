@@ -1,0 +1,96 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cluster-admin-binding-thorin
+subjects:
+- kind: ServiceAccount
+  name: thorin
+  namespace: erebor
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: security-admin-binding-dori
+  namespace: erebor
+subjects:
+- kind: ServiceAccount
+  name: dori
+  namespace: erebor
+roleRef:
+  kind: Role
+  name: security-admin
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: cluster-operator-binding-nori
+  namespace: erebor
+subjects:
+- kind: ServiceAccount
+  name: nori
+  namespace: erebor
+roleRef:
+  kind: Role
+  name: cluster-operator
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: developer-binding-balin
+  namespace: erebor
+subjects:
+- kind: ServiceAccount
+  name: balin
+  namespace: erebor
+roleRef:
+  kind: Role
+  name: developer
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: viewer-binding-bifur
+  namespace: erebor
+subjects:
+- kind: ServiceAccount
+  name: bifur
+  namespace: erebor
+roleRef:
+  kind: Role
+  name: viewer
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: app-admin-binding-bofur
+  namespace: erebor
+subjects:
+- kind: ServiceAccount
+  name: bofur
+  namespace: erebor
+roleRef:
+  kind: Role
+  name: app-admin
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: accountant-binding-bombur
+  namespace: erebor
+subjects:
+- kind: ServiceAccount
+  name: bombur
+  namespace: erebor
+roleRef:
+  kind: Role
+  name: accountant
+  apiGroup: rbac.authorization.k8s.io

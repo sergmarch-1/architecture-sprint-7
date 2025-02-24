@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: erebor
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: thorin
+  namespace: erebor
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: dori
+  namespace: erebor
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: nori
+  namespace: erebor
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: balin
+  namespace: erebor
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: bifur
+  namespace: erebor
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: bofur
+  namespace: erebor
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: bombur
+  namespace: erebor
